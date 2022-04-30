@@ -1,0 +1,71 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy", sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("./Gilroy-Light.otf");
+}
+
+@font-face {
+    font-family: "Neue-machina";
+    src: url("./NeueMachina-Ultrabold.otf");
+}
+
+.container {
+    background: #000000;
+    position: relative;
+    /* z-index: 1; */
+}
+
+.before {
+    content: "";
+    background: linear-gradient(30deg, #C72EC1, rgba(0, 0, 0, 0.6));
+    opacity: 0.64;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    border-radius: 20% 80% 0 0;
+    filter: blur(40px);
+}
+.after {
+    content: "";
+    background: linear-gradient(220deg, #C72EC1, rgba(0, 0, 0, 0.6));
+    opacity: 0.64;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-radius: 0 0 20% 80%;
+    /* z-index: -1; */
+    filter: blur(40px);
+}
+
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+}
+
+.tel > a {
+    font-family: "Neue-machina", serif;
+}
+
+.text {
+    font-family: "Neue-machina", serif;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+}
